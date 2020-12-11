@@ -88,7 +88,7 @@ alias reb='sudo reboot'
 alias wai='echo -e "You are in \e[1;34m$HOSTNAME\e[m"; pwd' #hostname in bright blue
 alias rel='source ~/.bashrc'
 alias fn='find -name'
-alias proc='ps aux | grep
+alias proc='ps aux | grep'
 
 #increases brightness by input using xrandr
 setb () {
