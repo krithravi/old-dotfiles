@@ -76,6 +76,7 @@ alias gpt='gnuplot' #gnuplot yee
 alias img='eog *.png' #show all PNG images
 alias ridzoom='killall -r '[z,Z]oom'' #zoom is really jank
 alias sound='pavucontrol' #manages sound for me
+alias scs='import' #follwed by sth.png takes screenshot
 
 ##########################################################
 # Computer stuff so I don't go crazy
