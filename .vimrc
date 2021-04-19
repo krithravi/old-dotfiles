@@ -1,8 +1,6 @@
 set runtimepath+=~/.vim_runtime
 set nocp
 syntax enable
-execute pathogen#infect()
-execute pathogen#helptags()
 syntax on
 se rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -22,6 +20,9 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'Chiel92/vim-autoformat'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+" Plugin 'dylanaraps/wal.vim'
 call vundle#end()
 
 let g:go_version_warning = 0
@@ -35,21 +36,42 @@ nnoremap <C-O> :bprev<CR>
 set foldmethod=syntax
 set foldlevel=99
 set foldcolumn=1
-let g:auto_origami_foldcolumn=2
 let g:auto_origami_foldcolumn=0
+
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_tabs = 1
-let g:airline_extensions#tabline#show_buffers = 1
+let g:airline_extensions#tabline#show_buffers = 0
 let g:airline_theme='angr'
+
+let g:airline_powerline_fonts = 1
+
+if !exists('g:airline_symbols')
+	let g:airline_symbols = {}
+endif
+
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = ''
+let g:airline_symbols.crypt = '🔒'
+let g:airline_symbols.readonly = '🔒'
+let g:airline_symbols.maxlinenr = ' c'
+let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.spell = 'Ꞩ'
+let g:airline_symbols.notexists = 'Ɇ'
+let g:airline_symbols.whitespace = 'Ξ'
+let g:airline_left_alt_sep = '|'
+let g:airline_right_alt_sep = ''
+
+
 
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 map <C-n> :NERDTreeToggle<CR>
 
-set t_Co=256   " This is may or may not needed.
+"set t_Co=256   " This is may or may not needed.
 
 set background=dark
 colorscheme PaperColor
-"colorscheme monokai
+"colorscheme wal
 set number
 
 let g:indentguides_spacechar = '|'
@@ -87,8 +109,7 @@ let g:rainbow_active = 1
 set ai "Auto indent
 set si "Smart indent
 
-set wrap "Wrap linesexecute pathogen#infect()execute pathogen#infect()
-" set textwidth=80
+set wrap
 hi foldcolumn ctermfg=lightgray
 
 set numberwidth=1
@@ -98,8 +119,11 @@ let g:tex_conceal=""
 au BufRead,BufNewFile *.txt set textwidth=80
 
 au BufRead,BufNewFile *.gnu set filetype=gnuplot
-" au BufRead,BufNewFile *.html set filetype=html
 
-" au BufRead,BufNewFile *.py set filetype=python
 set clipboard^=unnamed,unnamedplus " clipboard = normal clipboard
-:iabbrev </ </<C-X><C-O>
+
+" UltiSnips config (snippets)
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsSnippetDirectories=["mycoolsnippets"]
