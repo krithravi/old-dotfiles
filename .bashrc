@@ -108,7 +108,7 @@ LS_COLORS="di=1;36:*.png=1;33:\
 *.jpg=1;33:*.jpeg=1;33:*.zip=1;31:*.jar=1;31:\
 *.tar.gz=1;31:*pdf=1;32:*djvu=1;32:\
 *.tex=0;32:*.html=0;32:*.md=0;32:\
-*.cpp=0;33:*.java=0;33:*.py=0;33:\
+*.cpp=0;33:*.c=0;33:*.java=0;33:*.py=0;33:\
 *.js=0;33:*.r=0;33:*.gnu=0;33:\
 *akefile=1;34:ex=1;33:\
 *.dat=0;35:*.class=0;35:*.txt=0;35" ; export LS_COLORS;
@@ -121,5 +121,16 @@ export LESS_TERMCAP_se=$'\E[0m'
 export LESS_TERMCAP_so=$'\E[01;44;33m'
 export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;32m'
+
+  export SPICETIFY_INSTALL="/home/krithika/spicetify-cli"
+  export PATH="$SPICETIFY_INSTALL:$PATH"
+
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# Install Ruby Gems to ~/gems
+export GEM_HOME="$HOME/gems"
+export PATH="$HOME/gems/bin:$PATH"
 
 quo
