@@ -22,10 +22,11 @@ alias mkae='make'
 alias amek='make'
 
 ##########################################################
-# SSH Stuff
+# SSH
 
 ## openconnect vpn
 alias vpnstart="sudo $HOME/scripts/vpn_start.sh"
+alias utvpn="sudo $HOME/scripts/utstart.sh"
 alias vpnend="sudo $HOME/scripts/vpn_end.sh"
 
 ##########################################################
@@ -34,12 +35,13 @@ alias vpnend="sudo $HOME/scripts/vpn_end.sh"
 # getting into certain directories without the hassle
 
 alias parp='cd ~/researchstuff'
-alias code='cd ~/code'
+alias toc='cd ~/code'
 alias fun='cd ~/fun'
 alias doc='cd ~/Documents'
 alias dwn='cd ~/Downloads'
 alias boo='cd ~/books'
 alias play='cd ~/playground'
+alias desk='cd ~/Desktop'
 alias pippin='ssh pippin'
 
 # moving up directories faster (sorta like zsh)
@@ -56,6 +58,9 @@ alias gstat='git status'
 alias gull='git pull'
 alias gush='git push'
 alias gcm='git commit -m'
+alias gcb='git checkout -b'
+alias gba='git branch -a'
+alias gerge='git merge'
 
 ##########################################################
 # opening things - applications, or shorter versions of
@@ -69,7 +74,6 @@ alias defop='xdg-open' # opens with default application
 alias priv='opera -private' # private browsing in opera
 alias acc='gedit ~/Desktop/Diacritics &' #copy-paste accent marks
 alias mypy='python3.7' # uses python 3.8
-alias wut='show ~/fun/Learnt/main.pdf &' # my guide!
 alias yuh='emacs -nw' #emacs cli
 alias nav='ranger' #ranger! for CLI file navigation
 alias gpt='gnuplot' #gnuplot yee
@@ -77,7 +81,8 @@ alias img='eog *.png' #show all PNG images
 alias ridzoom='killall -r '[z,Z]oom'' #zoom is really jank
 alias sound='pavucontrol' #manages sound for me
 alias scs='import' #follwed by sth.png takes screenshot
-
+alias todo='vi ~/todo' # my todo list
+alias holy='show ~/books/funBooks/jirt/FotR.pdf' # fellowship
 ##########################################################
 # Computer stuff so I don't go crazy
 
@@ -90,8 +95,7 @@ alias wai='echo -e "You are in \e[1;34m$HOSTNAME\e[m"; pwd' #hostname in bright 
 alias rel='source ~/.bashrc'
 alias fn='find -name'
 alias proc='ps aux | grep'
-
-#increases brightness by input using xrandr
+#increases brightness by input
 setb () {
 	b=$(xrandr --verbose | grep -m 1 -w connected -A8 | grep Brightness | cut -f2- -d: | tr -d ' ')
 	b=$(echo "$b+$1" | bc -l)
