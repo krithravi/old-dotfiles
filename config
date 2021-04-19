@@ -43,7 +43,7 @@ bindsym $mod+d exec dmenu_run
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # my lock screen (doors of durin, but white on black)
-bindsym $mod+p exec i3lock -i /home/krithika/Pictures/neg_doordurin.png -t
+bindsym $mod+p exec i3lock -i /home/krithika/Pictures/neg_doordurin.png -t -e
 
 # change focus
 bindsym $mod+h focus left
@@ -174,16 +174,19 @@ bindsym $mod+r mode "resize"
 #}
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec --no-startup-id feh --bg-scale ~/Desktop/desk.png
+exec --no-startup-id feh --bg-scale ~/Desktop/lizardTolkien.png
 
 # Tapping and natural scrolling
 exec --no-startup-id xinput set-prop "SYNA2393:00 06CB:7A13 Touchpad" "libinput Tapping Enabled" 1 &
 exec --no-startup-id xinput set-prop "SYNA2393:00 06CB:7A13 Touchpad" "libinput Natural Scrolling Enabled" 1
 
 # Brightness
-bindsym XF86MonBrightnessUp exec /home/krithika/scripts/bright_up.sh
-bindsym XF86MonBrightnessDown exec /home/krithika/scripts/bright_down.sh
+# xrandr version
+#bindsym XF86MonBrightnessUp exec /home/krithika/scripts/bright_up.sh
+#bindsym XF86MonBrightnessDown exec /home/krithika/scripts/bright_down.sh
 
+bindsym XF86MonBrightnessUp exec brightnessctl s +2%
+bindsym XF86MonBrightnessDown exec brightnessctl s 2%-
 # Sound
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master 2%+
 bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master 2%-
@@ -192,9 +195,9 @@ bindsym XF86AudioMute exec --no-startup-id amixer set Master toggle
 
 #client
 # class                 border  backgr. text    indicator child_border
-client.focused          #000000 #b3ffe6 #000000 #2e9ef4   #285577
+client.focused          #000000 #76e0b0 #000000 #2e9ef4   #285577
 client.focused_inactive #333333 #1c4a32 #ffffff #484e50   #5f676a
-client.unfocused        #333333 #222222 #ffffff #292d2e   #222222
+client.unfocused        #f4de9a #222222 #ffffff #292d2e   #222222
 client.urgent           #2f343a #900000 #ffffff #900000   #900000
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
