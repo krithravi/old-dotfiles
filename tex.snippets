@@ -1,0 +1,49 @@
+# thank u simon :)
+
+snippet lbeg "begin{} / end{}" bA
+\begin{$1}
+	$0
+\end{$1}
+endsnippet
+
+snippet it "italics" i
+\emph{${1:${VISUAL}}} $0
+endsnippet
+
+
+snippet prt "translate" i
+\begin{table}[H]
+	\rowcolors{2}{blue!15}{white}
+	\centering
+	\begin{tabular}{lp{7cm}p{8cm}}
+		\toprule
+			& \textbf{English} & \textbf{\ita{Traducci\'on}} \\
+			$0
+		\midrule
+		\bottomrule
+	\end{tabular}
+\end{table}
+endsnippet
+
+snippet vocab "vocabESL" i
+\begin{table}[H]
+	\centering
+	\begin{tabular}{lll}
+	\toprule
+		\textbf{$1} & \textbf{\ita{$2}} & \textbf{$3}\\
+	\midrule
+	\bottomrule
+	\end{tabular}
+	\caption{$0}
+\end{table}
+endsnippet
+
+snippet qm "upsidedownqmark" i
+\textquestiondown $1
+endsnippet
+
+snippet ul "list" i
+\begin{itemize}
+	\item $1
+\end{itemize}
+endsnippet
