@@ -22,6 +22,8 @@ Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'Chiel92/vim-autoformat'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
 " Plugin 'dylanaraps/wal.vim'
 call vundle#end()
 
