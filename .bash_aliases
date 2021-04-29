@@ -24,24 +24,6 @@ alias amek='make'
 ##########################################################
 # SSH
 
-# Going to cruntch3
-alias crunch='ssh crunch3'
-
-#one for cruntch3a
-alias crunch3a='ssh cruntch3a'
-
-#sftp to cruntch3
-alias ttc='sftp kr1115@cruntch3.chem.unt.edu'
-
-# Getting into chamomile
-#alias chamo='ssh krithika@cisneros-gw.chem.unt.edu'
-alias chamo='ssh chamomile-via-coffeepot'
-
-# Sftp into coffeepot (for tlapipod)
-alias coffee='sftp krithika@cisneros-gw.chem.unt.edu'
-
-#ssh into ut risk
-alias risk='ssh krithika@risk.cs.utexas.edu'
 
 ## openconnect vpn
 alias vpnstart="sudo $HOME/scripts/vpn_start.sh"
