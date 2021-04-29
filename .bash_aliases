@@ -24,6 +24,25 @@ alias amek='make'
 ##########################################################
 # SSH
 
+# Going to cruntch3
+alias crunch='ssh crunch3'
+
+#one for cruntch3a
+alias crunch3a='ssh cruntch3a'
+
+#sftp to cruntch3
+alias ttc='sftp kr1115@cruntch3.chem.unt.edu'
+
+# Getting into chamomile
+#alias chamo='ssh krithika@cisneros-gw.chem.unt.edu'
+alias chamo='ssh chamomile-via-coffeepot'
+
+# Sftp into coffeepot (for tlapipod)
+alias coffee='sftp krithika@cisneros-gw.chem.unt.edu'
+
+#ssh into ut risk
+alias risk='ssh krithika@risk.cs.utexas.edu'
+
 ## openconnect vpn
 alias vpnstart="sudo $HOME/scripts/vpn_start.sh"
 alias utvpn="sudo $HOME/scripts/utstart.sh"
@@ -41,7 +60,8 @@ alias doc='cd ~/Documents'
 alias dwn='cd ~/Downloads'
 alias boo='cd ~/books'
 alias play='cd ~/playground'
-alias desk='cd ~/Desktop'
+alias dsk='cd ~/Desktop'
+alias mus='cd ~/music'
 alias pippin='ssh pippin'
 
 # moving up directories faster (sorta like zsh)
@@ -71,8 +91,6 @@ alias calc='gcalccmd' # CLI calculator
 alias mail='mutt' # mail client mutt
 alias fm='nemo .' # Cinnamon's file manager, nemo
 alias defop='xdg-open' # opens with default application
-alias priv='opera -private' # private browsing in opera
-alias acc='gedit ~/Desktop/Diacritics &' #copy-paste accent marks
 alias mypy='python3.7' # uses python 3.8
 alias yuh='emacs -nw' #emacs cli
 alias nav='ranger' #ranger! for CLI file navigation
@@ -83,11 +101,10 @@ alias sound='pavucontrol' #manages sound for me
 alias scs='import' #follwed by sth.png takes screenshot
 alias todo='vi ~/todo' # my todo list
 alias holy='show ~/books/funBooks/jirt/FotR.pdf' # fellowship
+alias web='cd /home/krithika/code/webStuff/my-app' # my website
 ##########################################################
 # Computer stuff so I don't go crazy
 
-alias new='cd;clear;clear'
-alias mt='clear;clear'
 alias up='sudo apt-get -y update; sudo apt-get -y dist-upgrade'
 alias totclean='up; sudo apt-get -y clean ;sudo apt-get -y autoclean; sudo apt-get -y autoremove'
 alias reb='sudo reboot'
@@ -95,6 +112,7 @@ alias wai='echo -e "You are in \e[1;34m$HOSTNAME\e[m"; pwd' #hostname in bright 
 alias rel='source ~/.bashrc'
 alias fn='find -name'
 alias proc='ps aux | grep'
+alias stor='du -h --max-depth=1 . | sort -h'
 #increases brightness by input
 setb () {
 	b=$(xrandr --verbose | grep -m 1 -w connected -A8 | grep Brightness | cut -f2- -d: | tr -d ' ')
