@@ -7,7 +7,9 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'NLKNguyen/papercolor-theme'
 Plugin 'thaerkh/vim-indentguides'
+Plugin 'tribela/vim-transparent'
 call vundle#end()
+
 set number
 set cursorline
 set mouse=a
@@ -18,7 +20,6 @@ set ai "Auto indent
 set si "Smart indent
 
 colorscheme PaperColor
-
 let g:tex_conceal=""
 set clipboard^=unnamed,unnamedplus " clipboard = normal clipboard
 
